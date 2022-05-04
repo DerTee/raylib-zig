@@ -44,8 +44,8 @@ pub extern fn Vector3Scale(v: Vector3, scalar: f32) Vector3;
 pub extern fn Vector3Multiply(v1: Vector3, v2: Vector3) Vector3;
 pub extern fn Vector3CrossProduct(v1: Vector3, v2: Vector3) Vector3;
 pub extern fn Vector3Perpendicular(v: Vector3) Vector3;
-pub extern fn Vector3Length(v: const Vector3) f32;
-pub extern fn Vector3LengthSqr(v: const Vector3) f32;
+pub extern fn Vector3Length(v: Vector3) f32;
+pub extern fn Vector3LengthSqr(v: Vector3) f32;
 pub extern fn Vector3DotProduct(v1: Vector3, v2: Vector3) f32;
 pub extern fn Vector3Distance(v1: Vector3, v2: Vector3) f32;
 pub extern fn Vector3DistanceSqr(v1: Vector3, v2: Vector3) f32;
@@ -107,5 +107,3 @@ pub extern fn QuaternionToAxisAngle(q: Quaternion, outAxis: [*c]Vector3, outAngl
 pub extern fn QuaternionFromEuler(pitch: f32, yaw: f32, roll: f32) Quaternion;
 pub extern fn QuaternionToEuler(q: Quaternion) Vector3;
 pub extern fn QuaternionTransform(q: Quaternion, mat: Matrix) Quaternion;
-
-
